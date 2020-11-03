@@ -55,11 +55,11 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
-                            nexusUrl: NEXUS_URL,
+                            nexusUrl: 18.220.238.138:8081/,
                             groupId: pom.groupId,
                             version: '${BUILD_NUMBER}',
-                            repository: NEXUS_REPOSITORY,
-                            credentialsId: NEXUS_CREDENTIAL_ID,
+                            repository: http://18.220.238.138:8081/repository/simpleapp/,
+                            credentialsId: 433e7186-a8c3-4a43-ae22-d93d53ceebf2,
                             artifacts: [
                                 // Artifact generated such as .jar, .ear and .war files.
                                 [artifactId: pom.artifactId,
