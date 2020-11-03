@@ -43,7 +43,7 @@ pipeline {
                 [
                     artifactId: 'spring3-mvc-maven-xml-hello-world', 
                     classifier: '', 
-                    file: 'target/spring3 mvc maven-1.0.0.war', 
+                    file: 'target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
                     type: 'war'
                 ]
             ], 
