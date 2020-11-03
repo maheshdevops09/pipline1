@@ -40,20 +40,20 @@ pipeline {
         stage("publish to nexus") {
             steps {
              nexusArtifactUploader artifacts: [
-                [
-                    artifactId: 'spring3-mvc-maven-xml-hello-world', 
-                    classifier: '', 
-                    file: 'target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
-                    type: 'war'
-                ]
-            ], 
-                    credentialsId: '433e7186-a8c3-4a43-ae22-d93d53ceebf2', 
-                    groupId: 'com.madhu', 
-                    nexusUrl: '172.31.40.80', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: 'simpleapp/', 
-                    version: '1.0.0'
+  [
+    artifactId: 'spring3-mvc-maven-xml-hello-world', 
+    classifier: '', 
+    file: '/var/lib/jenkins/workspace/newjob/target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
+    type: 'war'
+    ]
+    ], 
+    credentialsId: 'nexus3', 
+    groupId: 'com.madhu', 
+    nexusUrl: '172.31.40.80', 
+    nexusVersion: 'nexus2', 
+    protocol: 'http', 
+    repository: 'simpleapp/', 
+    version: '1.0.0'
     }
 }
     }
