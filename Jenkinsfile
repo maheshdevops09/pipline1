@@ -55,7 +55,7 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
-                            nexusUrl: 18.220.238.138:8081/,
+                            nexusUrl: 172.31.40.80:8081,
                             groupId: pom.groupId,
                             version: '${BUILD_NUMBER}',
                             repository: http://18.220.238.138:8081/repository/simpleapp/,
