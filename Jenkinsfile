@@ -50,9 +50,9 @@ pipeline {
                     credentialsId: '433e7186-a8c3-4a43-ae22-d93d53ceebf2', 
                     groupId: 'com.madhu', 
                     nexusUrl: '18.220.238.138:8081/', 
-                    nexusVersion: 'nexus2', 
+                    nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'http://18.220.238.138:8081/repository/simpleapp/', 
+                    repository: 'simpleapp/', 
                     version: '1.0.0'
     }
 }
