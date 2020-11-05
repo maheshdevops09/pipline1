@@ -33,7 +33,7 @@ pipeline {
                     // If you are using Windows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
                    // bat(/${MAVEN_HOME}\bin\mvn -Dmaven.test.failure.ignore clean package/)
-                    sh "mvn clean install"
+                    sh "mvn clean install deploy"
                // }
             }
         }
@@ -49,7 +49,7 @@ pipeline {
     ], 
     credentialsId: 'nexus3', 
     groupId: 'com.madhu', 
-    nexusUrl: '18.216.67.168', 
+    nexusUrl: '18.216.67.168:8081', 
     nexusVersion: 'nexus2', 
     protocol: 'http', 
     repository: 'simpleapp/', 
