@@ -49,7 +49,7 @@ pipeline {
     ], 
     credentialsId: 'nexus3', 
     groupId: 'com.madhu', 
-    nexusUrl: '18.220.238.138', 
+    nexusUrl: '18.216.67.168', 
     nexusVersion: 'nexus2', 
     protocol: 'http', 
     repository: 'simpleapp/', 
