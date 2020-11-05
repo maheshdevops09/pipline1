@@ -52,7 +52,7 @@ pipeline {
     nexusUrl: '18.216.67.168:8081', 
     nexusVersion: 'nexus2', 
     protocol: 'http', 
-    repository: 'http://18.216.67.168:8081/#browse/browse/components:simpleapp', 
+    repository: 'simpleapp/', 
     version: '1.0.0'
     }
 }
