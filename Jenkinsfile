@@ -6,6 +6,9 @@ pipeline {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
         maven "maven"
     }
+    options{
+            buildDiscarder logRotator(daysToKeepStr:'5',numToKeepStr:'7')
+           }
     environment {
         // This can be nexus3 or nexus2
         NEXUS_VERSION = "nexus3"
@@ -42,22 +45,22 @@ pipeline {
                 script{
                 def mavenPom = readMavenPom file:'pom.xml'
              nexusArtifactUploader artifacts: [
-  [
-    artifactId: 'spring3-mvc-maven-xml-hello-world', 
-    classifier: '', 
-      file: "target/spring3-mvc-maven-xml-hello-world-${mavenPom.version}.war", 
-    type: 'war'
-    ]
-    ], 
-    credentialsId: 'nexus3', 
-    groupId: 'com.madhu', 
-    nexusUrl: '172.31.40.80:8081', 
-    nexusVersion: 'nexus3', 
-    protocol: 'http', 
-    repository: 'simpleapp', 
-    version: "${mavenPom.version}"
+                [
+                    artifactId: 'spring3-mvc-maven-xml-hello-world', 
+                    classifier: '', 
+                    file: "target/spring3-mvc-maven-xml-hello-world-${mavenPom.version}.war", 
+                    type: 'war'
+                ]
+                ], 
+                     credentialsId: 'nexus3', 
+                     groupId: 'com.madhu', 
+                     nexusUrl: '172.31.40.80:8081', 
+                     nexusVersion: 'nexus3', 
+                     protocol: 'http', 
+                     repository: 'simpleapp', 
+                     version: "${mavenPom.version}"
                 }
+             }
     }
-}
     }
 }
