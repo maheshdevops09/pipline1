@@ -43,16 +43,16 @@ pipeline {
   [
     artifactId: 'spring3-mvc-maven-xml-hello-world', 
     classifier: '', 
-    file: '/var/lib/jenkins/workspace/newjob/target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
+    file: 'target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
     type: 'war'
     ]
     ], 
     credentialsId: 'nexus3', 
     groupId: 'com.madhu', 
-    nexusUrl: '18.216.67.168:8081', 
+    nexusUrl: '172.31.40.80:8081', 
     nexusVersion: 'nexus2', 
     protocol: 'http', 
-    repository: 'http://18.216.67.168:8081/repository/simpleapp/', 
+    repository: 'simpleapp/', 
     version: '1.0.0'
     }
 }
