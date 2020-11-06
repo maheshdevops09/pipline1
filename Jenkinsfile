@@ -39,11 +39,12 @@ pipeline {
         }
         stage("publish to nexus") {
             steps {
+                def mavenPom = readMavenPom 'pom.xml'
              nexusArtifactUploader artifacts: [
   [
     artifactId: 'spring3-mvc-maven-xml-hello-world', 
     classifier: '', 
-    file: 'target/spring3-mvc-maven-xml-hello-world-1.0.0.war', 
+      file: "target/spring3-mvc-maven-xml-hello-world-${mavenPom.version}.war", 
     type: 'war'
     ]
     ], 
@@ -53,7 +54,7 @@ pipeline {
     nexusVersion: 'nexus3', 
     protocol: 'http', 
     repository: 'simpleapp', 
-    version: '1.0.0'
+    version: "${mavenPom.version}"
     }
 }
     }
