@@ -40,7 +40,7 @@ pipeline {
         stage("publish to nexus") {
             steps {
                 script{
-                def mavenPom = readMavenPom 'pom.xml'
+                def mavenPom = readMavenPom file:'pom.xml'
              nexusArtifactUploader artifacts: [
   [
     artifactId: 'spring3-mvc-maven-xml-hello-world', 
