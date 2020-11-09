@@ -75,7 +75,7 @@ pipeline {
                         $class: 'GitSCM',
                         branches: [[name : "${params.commitId}"]],
                         userRemoteConfigs: [[
-                            credentialsId: 'git_ssh_master',
+                          //  credentialsId: 'git_ssh_master',
                             url: 'https://github.com/maheshdevops09/pipline1.git'
                         ]]
                     ])
