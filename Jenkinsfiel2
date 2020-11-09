@@ -112,7 +112,7 @@ pipeline {
             }
         }
 
-        stage('User Input') {
+     /*   stage('User Input') {
             // when directive allows the Pipeline to determine whether the stage should be executed depending on the given condition
             // built-in conditions - branch, expression, allOf, anyOf, not etc.
             when {
@@ -135,7 +135,7 @@ pipeline {
                             ]
                 }
             }
-        }
+        } */
 
         stage('Maven version') {
             steps {
