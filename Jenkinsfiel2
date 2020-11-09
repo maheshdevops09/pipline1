@@ -61,7 +61,7 @@ pipeline {
      * some of the supported tools - maven, jdk, gradle
      */
     tools {
-        jdk 'java'
+       // jdk 'java'
         maven 'maven'
     }
 
